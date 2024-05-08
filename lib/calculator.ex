@@ -4,7 +4,7 @@ defmodule Calculator do
       {pid, :+, a, b} -> send(pid, a + b)
       {pid, :-, a, b} -> send(pid, a - b)
       {pid, :x, a, b} -> send(pid, a * b)
-      {pid, :/, a, 0} -> exit("division by zero")
+      {_pid, :/, _a, 0} -> exit("division by zero")
       {pid, :/, a, b} -> send(pid, a / b)
       {pid, :count} -> send(pid, count)
     end

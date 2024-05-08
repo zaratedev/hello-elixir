@@ -8,7 +8,7 @@ defmodule ServerCalculator do
   def init(args) do
     IO.puts "Start server calculator"
     IO.inspect args
-    {:ok, %{count: 0}, 3000}
+    {:ok, %{count: 0}}
   end
 
   def terminate(_reason, _state) do
