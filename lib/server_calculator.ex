@@ -5,7 +5,9 @@ defmodule ServerCalculator do
     IO.puts "Start server calculator"
     IO.inspect args
 
-    {:ok, %{count: 0}}
+    # {:ok, %{count: 0}}
+
+    {:stop, "Error connection"}
   end
 
   def handle_call({:add, x, y}, _from, %{count: count}) do
